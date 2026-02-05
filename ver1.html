@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emerald Tuition Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui}
+body{background:#f6f8fb;color:#111}
+a{text-decoration:none;color:inherit}
+
+.container{width:92%;max-width:1200px;margin:auto}
+
+/* NAV */
+nav{
+    position:sticky;
+    top:0;
+    background:#fff;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+    z-index:99;
+}
+.nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.8rem 0;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+}
+.logo img{height:42px}
+.menu{
+    display:flex;
+    gap:1.4rem;
+    font-weight:600;
+}
+.menu a:hover{color:#0b8f6a}
+
+/* HERO */
+.hero{
+    padding:3.5rem 0;
+    background:linear-gradient(135deg,#0b8f6a,#11b392);
+    color:#fff;
+}
+.hero-inner{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:2rem;
+    align-items:center;
+}
+.hero h1{font-size:2.6rem}
+.hero p{opacity:.9;margin-top:.7rem}
+.hero button{
+    margin-top:1.3rem;
+    padding:.75rem 1.4rem;
+    border:none;
+    border-radius:8px;
+    background:#fff;
+    color:#0b8f6a;
+    font-weight:700;
+}
+
+/* IMAGE */
+.hero img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+/* SECTION */
+section{padding:3rem 0}
+.title{text-align:center;margin-bottom:2rem}
+.title h2{font-size:2.1rem}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1.2rem;
+}
+
+/* CARD */
+.card{
+    background:#fff;
+    padding:1.5rem;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+    align-items:center;
+}
+.about img{
+    width:100%;
+    border-radius:18px;
+}
+
+/* TESTIMONIAL */
+.review{
+    background:#fff;
+    padding:1.4rem;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+.review h4{margin-top:.6rem}
+
+/* CONTACT */
+.contact{
+    background:#0b8f6a;
+    color:white;
+    border-radius:20px;
+    padding:3rem 1.5rem;
+    text-align:center;
+}
+.contact button{
+    margin-top:1rem;
+    padding:.75rem 1.5rem;
+    border:none;
+    border-radius:8px;
+    background:white;
+    color:#0b8f6a;
+    font-weight:700;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    padding:.8rem 1rem;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+footer{text-align:center;padding:1.4rem;opacity:.6}
+
+/* MOBILE */
+@media(max-width:900px){
+    .hero-inner,.about{grid-template-columns:1fr}
+    .hero h1{font-size:2.1rem}
+    .menu{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        <div class="logo">
+            <img src="images/logo.jpeg">
+            <strong style="color: #0b8f6a;">Emerald Tuition Academy</strong>
+        </div>
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container hero-inner">
+        <div>
+            <h1>High Performance Maths & Science Tuition</h1>
+            <p>We teach KS3 Maths, GCSE Maths, Biology, Chemistry, Physics and A Level Chemistry with strong focus on exam mastery and confidence.</p>
+            <button>Book a Lesson</button>
+        </div>
+        <img src="https://www.elworthy.co.uk/wp-content/uploads/2021/09/20210823_112540-scaled.jpg">
+    </div>
+</section>
+
+<section id="subjects">
+    <div class="container">
+        <div class="title"><h2>What We Teach</h2></div>
+        <div class="grid">
+            <div class="card">Key Stage 3 Maths</div>
+            <div class="card">GCSE Maths</div>
+            <div class="card">GCSE Biology</div>
+            <div class="card">GCSE Chemistry</div>
+            <div class="card">GCSE Physics</div>
+            <div class="card">A Level Chemistry</div>
+            <div class="card">1-2-1 Sessions</div>
+            <div class="card">Group Lessons</div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container about">
+        <div>
+            <h2>Why Parents Choose Us</h2>
+            <p>We have over 10 years of private tuition experience helping students increase confidence, improve grades and master exam technique.</p>
+            <p>Each lesson focuses on weak areas, exam questions and mark maximisation strategies.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b">
+    </div>
+</section>
+
+<section id="reviews">
+    <div class="container">
+        <div class="title"><h2>Parent & Student Feedback</h2></div>
+        <div class="grid">
+            <div class="review">
+                <p>Started with grade 6 chemistry and achieved an 8. Amazing exam preparation.</p>
+                <h4>Shaheen Marwari</h4>⭐⭐⭐⭐⭐
+            </div>
+            <div class="review">
+                <p>My A Level Chemistry grade improved massively to an A.</p>
+                <h4>Zaina</h4>⭐⭐⭐⭐⭐
+            </div>
+            <div class="review">
+                <p>Grade 9 Physics and Chemistry, 8 Biology. Exceptional tutor.</p>
+                <h4>Rahila Hussain</h4>⭐⭐⭐⭐⭐
+            </div>
+            <div class="review">
+                <p>Highest UMS marks in chemistry thanks to Emerald Tuition.</p>
+                <h4>M</h4>⭐⭐⭐⭐⭐
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact">
+        <h2>Ready To Improve Grades?</h2>
+        <p>Message us to book a session and start progressing immediately.</p>
+        <button><a href="https://wa.me/447933665087">Contact Now</a></button>
+    </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/447933665087">💬 WhatsApp</a>
+
+<footer>
+© 2026 Emerald Tuition Academy
+</footer>
+
+</body>
+</html>
