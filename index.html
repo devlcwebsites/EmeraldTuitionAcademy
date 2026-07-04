@@ -26,6 +26,7 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:.8rem 0;
+    
 }
 .logo{
     display:flex;
@@ -45,6 +46,7 @@ nav{
     padding:3.5rem 0;
     background:linear-gradient(135deg,#0b8f6a,#11b392);
     color:#fff;
+    padding-top: 2rem;
 }
 .hero-inner{
     display:grid;
@@ -144,7 +146,7 @@ section{padding:3rem 0}
     text-align:center;
 }
 .contact button{
-    margin-top:1rem;
+    margin-top:.5rem;
     padding:.75rem 1.5rem;
     border:none;
     border-radius:8px;
@@ -180,6 +182,62 @@ section {
   scroll-margin-top: 90px;
 }
 
+/* RESULTS BAR */
+.results-bar{
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    margin-bottom:1.7rem;
+}
+
+.result-box{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(6px);
+    padding:1rem 1.2rem;
+    border-radius:14px;
+    min-width:170px;
+    flex:1;
+}
+
+.result-box strong{
+    display:block;
+    font-size:1.7rem;
+    font-weight:800;
+    line-height:1;
+}
+
+.result-box span{
+    display:block;
+    margin-top:.10rem;
+    font-weight:600;
+}
+
+/* MOBILE FIX */
+@media(max-width:700px){
+
+    .results-bar{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:.6rem;
+    }
+
+    .result-box{
+        min-width:0;
+        padding:.8rem .6rem;
+        text-align:center;
+    }
+
+    .result-box strong{
+        font-size:1.3rem;
+    }
+
+    .result-box span{
+        font-size:.72rem;
+        line-height:1.2;
+    }
+
+}
+
 </style>
 </head>
 
@@ -197,6 +255,7 @@ section {
             <a href="#delivery">Sessions</a>
             <a href="#why">Why Us</a>
             <a href="#reviews">Reviews</a>
+            <a href="./resources">Resources</a>
             <a href="#apply">Apply</a>
             <a href="#contact">Contact</a>
         </div>
@@ -205,37 +264,242 @@ section {
 
 <section class="hero">
     <div class="container hero-inner">
+
         <div>
-            <h1>High Performance Online Science & Maths Tuition</h1>
-            <p>Online A Level, GCSE and KS3 tuition with focus on confidence, exam mastery and results.</p>
-            <a href="https://forms.gle/KcSVuQcyiTKTGoABA" target="_blank"><button style="cursor: pointer;">Apply Now</button></a>
+
+            <!-- RESULTS BAR -->
+<div class="results-bar">
+
+    <div class="result-box">
+        <strong>+2</strong>
+        <span>Average Grade Improvement</span>
+    </div>
+
+    <div class="result-box">
+        <strong>90%</strong>
+        <span>Pass Rate</span>
+    </div>
+
+    <div class="result-box">
+        <strong>34+</strong>
+        <span>Five-Star Reviews</span>
+    </div>
+
+</div>
+
+            <!-- MAIN HEADLINE -->
+            <h1>
+                Unlock Your Potential with Expert Online Tuition
+            </h1>
+
+            <p style="font-size:1.05rem;max-width:620px;">
+                Personalised online lessons designed to improve understanding, increase confidence, and help students achieve better academic results.
+                <br><br>
+At ETA, we provide structured tuition tailored to each student's needs, helping them build strong foundations, develop effective learning strategies, and prepare for success.
+            </p>
+
+            <!-- BUTTONS -->
+            <div style="
+                display:flex;
+                gap:1rem;
+                flex-wrap:wrap;
+                margin-top:1.7rem;
+            ">
+
+                <a href="#subjects">
+                    <button style="cursor:pointer;">
+                        Explore Subjects
+                    </button>
+                </a>
+
+                <a href="https://calendly.com/YOUR-LINK"
+                   target="_blank">
+
+                    <button style="
+                        cursor:pointer;
+                        background:#111;
+                        color:#fff;
+                    ">
+                        Book Free Trial
+                    </button>
+
+                </a>
+
+            </div>
+
         </div>
+
+        <!-- IMAGE -->
         <img src="https://homeedlife.co.uk/wp-content/uploads/2023/11/boy-doing-online-school.jpg">
+
     </div>
 </section>
 
 <section id="subjects">
     <div class="container">
         <div class="title"><h2>What We Teach</h2></div>
+
         <div class="grid">
-            <div class="card">A Level Chemistry</div>
-            <div class="card">GCSE Physics</div>
-            <div class="card">GCSE Chemistry</div>
-            <div class="card">GCSE Biology</div>
-            <div class="card">GCSE Maths</div>
-            <div class="card">Key Stage 3 Maths</div>
+
+            <!-- A LEVEL CHEMISTRY -->
+            <div class="card subject-card">
+
+                <div class="subject-top"
+                     
+                     style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+
+                    <span>A Level Chemistry</span>
+
+                    <div style="display:flex;align-items:center;gap:.7rem;">
+
+                        <a href="subjects/a-level-chemistry-tutor"
+                           onclick="event.stopPropagation()"
+                           style="background:#0b8f6a;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                           >
+                        </a>
+
+                    </div>
+                </div>
+
+                </div>
+
+<div class="card subject-card">
+    <div class="subject-top" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>A Level Biology</span>
+        <a href="subjects/a-level-biology-tutor"
+           style="background:#0b8f6a;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+           >
+        </a>
+    </div>
+</div>
+
+            <!-- GCSE PHYSICS -->
+            <div class="card subject-card">
+
+                <div class="subject-top"
+                     
+                     style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+
+                    <span>GCSE Physics</span>
+
+                    <a href="subjects/gcse-physics-tutor"
+                       onclick="event.stopPropagation()"
+                       style="background:#0b8f6a;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                       >
+                    </a>
+                </div>
+
+                </div>
+
+            <!-- GCSE CHEMISTRY -->
+            <div class="card subject-card">
+
+                <div class="subject-top"
+                     
+                     style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+
+                    <span>GCSE Chemistry</span>
+
+                    <a href="subjects/gcse-chemistry-tutor"
+                       onclick="event.stopPropagation()"
+                       style="background:#0b8f6a;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                       >
+                    </a>
+                </div>
+
+                </div>
+
+            <!-- GCSE BIOLOGY -->
+            <div class="card subject-card">
+
+                <div class="subject-top"
+                     
+                     style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+
+                    <span>GCSE Biology</span>
+
+                    <a href="subjects/gcse-biology-tutor"
+                       onclick="event.stopPropagation()"
+                       style="background:#0b8f6a;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                       >
+                    </a>
+                </div>
+
+                </div>
+
+            <!-- GCSE MATHS -->
+            <div class="card subject-card">
+
+                <div class="subject-top"
+                     
+                     style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+
+                    <span>GCSE Maths</span>
+
+                    <a href="subjects/gcse-maths-tutor"
+                       onclick="event.stopPropagation()"
+                       style="background:#0b8f6a;color:#fff;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;">
+                       >
+                    </a>
+                </div>
+
+                </div>
+
+            <!-- KS3 MATHS -->
+            <div class="card subject-card">
+
+                <div class="subject-top"
+                     
+                     style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+
+                    <span>GCSE English</span>
+
+
+
+                
+            </div>
 
         </div>
     </div>
 </section>
 
+
+
+
+
 <section id="delivery">
     <div class="container">
-        <div class="title"><h2>How Sessions Are Delivered</h2></div>
+        <div class="title"><h2>How Our Sessions Are Delivered</h2></div>
+
+        <p style="text-align:center;max-width:850px;margin:0 auto 2rem auto;">
+            Every student learns differently, which is why our sessions are tailored around their specific goals and areas for improvement.
+        </p>
+
         <div class="grid">
-            <div class="card">Lessons are delivered either 1-2-1 for personalised support or in small groups for collaborative learning.</div>
-            <div class="card">All sessions are online with structured teaching, exam focus and interactive guidance.</div>
+            <div class="card">
+                <h3 style="color:#0b8f6a;margin-bottom:.7rem;">Preparation</h3>
+                <p>Lessons are carefully planned to match the student's current ability and learning objectives.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color:#0b8f6a;margin-bottom:.7rem;">Teaching</h3>
+                <p>Tutors explain concepts clearly, break down challenging topics, and encourage active participation.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color:#0b8f6a;margin-bottom:.7rem;">Practice</h3>
+                <p>Students apply their knowledge through guided questions, activities, and exam-style tasks.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="color:#0b8f6a;margin-bottom:.7rem;">Feedback</h3>
+                <p>Tutors provide ongoing guidance to help students improve and make progress.</p>
+            </div>
         </div>
+
+        <p style="text-align:center;max-width:850px;margin:2rem auto 0 auto;">
+            All sessions are delivered online, providing flexible and convenient access to high-quality tuition.
+        </p>
     </div>
 </section>
 
@@ -243,8 +507,10 @@ section {
     <div class="container about">
         <div style="text-align: center;">
             <h2 style="margin-bottom: 1rem;">Why Parents Choose Us</h2>
-            <p>We deliver high-quality online tuition focused on exam technique, confidence and consistent progress.</p>
-            <p>Lessons are tailored to weak areas with structured exam preparation.</p>
+            <p>Choosing the right tutor can make a significant difference to a student's confidence and progress. ETA provides a supportive, structured learning environment where students receive the guidance they need to succeed.</p>
+            <br>
+            <p>Our focus is simple:<br>
+            Understand the student → Identify areas for improvement → Provide targeted support → Build confidence and achieve results</p>
         </div>
         <img src="https://static.wixstatic.com/media/75bcfb_be0d665fe6b447b88cdbca9f40bd2ba9~mv2.jpg/v1/fill/w_721,h_543,al_c/75bcfb_be0d665fe6b447b88cdbca9f40bd2ba9~mv2.jpg">
     </div>
@@ -263,7 +529,7 @@ section {
                 </ul>
             </div>
             <div class="feature">
-                <h3>Versatile Scheduling</h3>
+                <h3>Flexible Scheduling</h3>
                 <ul>
                     <li>Evening & weekend slots</li>
                     <li>Online via Zoom</li>
@@ -288,11 +554,20 @@ section {
 </div>
 
 <div class="feature">
-    <h3>Flexible Payments</h3>
+    <h3>Pay-As-You-Go</h3>
     <ul>
         <li>No block booking required</li>
         <li>No advance payment</li>
         <li>Pay only for lessons taken</li>
+    </ul>
+</div>
+
+<div class="feature">
+    <h3>Tailored Learning</h3>
+    <ul>
+        <li>Choose your schedule</li>
+        <li>Start anytime</li>
+        <li>Stop anytime</li>
     </ul>
 </div>
 
@@ -327,7 +602,7 @@ section {
             <a href="https://www.google.com/search?sca_esv=fa30f98f2ff67e07&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOelwA-dUasPa48wmMocdt_zc8w1ixSBPUWT4-S5v3i-HgxTdZVt08RGUj78HB-r6PFb3XQNc_aOpmDAok-s4RBOkZh48gJ9RqbSSlosvEtI8_Vebgw%3D%3D&q=Emerald+Tuition+Academy+Reviews&sa=X&ved=2ahUKEwixqMnhg8WSAxW_Q0EAHY_tHYEQ0bkNegQIPRAD&biw=1272&bih=588&dpr=1.5&sei=dfSFad6SLpGdhbIPxcadkQw" 
                target="_blank"
                style="display:inline-block; padding:0.8rem 1.6rem; background:#0b8f6a; color:#fff; border-radius:8px; font-weight:700; box-shadow:0 8px 25px rgba(0,0,0,.1);">
-                ⭐ Rated 5 Stars on Google Reviews (32)
+                ⭐ Rated 5 Stars on Google Reviews (34+)
             </a>
         </div>
 
@@ -335,17 +610,35 @@ section {
 </section>
 
 
+
+
+<section id="resources" style="
+    border-top: 4px solid #0b8f6a;
+    border-bottom: 4px solid #0b8f6a;
+    margin: 3rem 0;
+    padding: 4rem 0;
+    background: #fff;">
+    <div class="container" style="text-align:center">
+        <div class="title"><h2>Free GCSE Resources</h2></div>
+        <p style="max-width:700px;margin:0 auto 1.5rem auto;">
+            Access free downloadable revision resources, worksheets and exam practice materials.
+        </p>
+        <a class="apply-btn" href="./resources">View Resources</a>
+    </div>
+</section>
+
+
 <section id="apply">
     <div class="container" style="text-align:center">
-        <div class="title"><h2>Apply Now</h2></div>
-        <p>Click below to complete the application form.</p>
-        <a class="apply-btn" href="https://forms.gle/KcSVuQcyiTKTGoABA" target="_blank">Open Application Form</a>
+        <div class="title"><h2>Book A FREE Demo</h2></div>
+        <p>Click below to schedule a free class!</p>
+        <a class="apply-btn" href="https://forms.gle/KcSVuQcyiTKTGoABA" target="_blank">Open Booking Page</a>
     </div>
 </section>
 
 <section id="contact">
     <div class="container contact">
-        <h2>Ready To Improve Grades?</h2>
+        <h2 style="margin-bottom: 1.5rem;">Ready To Improve Grades?</h2>
         <p>Message us for enquiries or apply using the form above.</p>
         <button><a href="https://wa.me/447933665087">WhatsApp Enquiries</a></button>
     </div>
